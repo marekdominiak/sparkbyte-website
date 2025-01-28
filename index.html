@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparkbyte Solutions</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+    <header class="sticky-header">
+        <nav>
+            <div class="nav-container">
+                <img src="img/logo.png" alt="Sparkbyte Logo" class="logo">
+                <div class="company-name">SPARKBYTE SOLUTIONS LTD</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Sparkbyte Solutions Ltd</h1>
+            <p class="tagline">We transform digital challenges into innovative solutions</p>
+        </div>
+    </section>
+
+    <section id="services" class="services-section">
+        <div class="service-cards">
+            <div class="service-card" style="background-image: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.7)), url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b')">
+                <h2>Web Applications</h2>
+                <p>Full-cycle development of scalable web applications with modern frameworks and cloud-native architectures.</p>
+            </div>
+            
+            <div class="service-card" style="background-image: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.7)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa')">
+                <h2>Cloud Systems</h2>
+                <p>Design and implementation of cloud infrastructure on AWS, Azure, and GCP with DevOps best practices.</p>
+            </div>
+            
+            <div class="service-card" style="background-image: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.7)), url('https://images.pexels.com/photos/256514/pexels-photo-256514.jpeg')">
+                <h2>Enterprise Solutions</h2>
+                <p>Domain-driven design implementation for complex business systems with microservices architecture.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            
+
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <div class="business-info">
+                    <h3>Contact Information</h3>
+                    <p><strong>Address:</strong><br>
+                    Piraeus 30, Floor 1, Office 1<br>
+                    Strovolos 2023, Nicosia, Cyprus</p>
+                    
+                    <p><strong>Email:</strong><br>
+                    <a href="mailto:office@sparkbyte.eu">office@sparkbyte.eu</a></p>
+                    
+                    <p><strong>Business Hours:</strong><br>
+                    Mon - Fri: 8:30am - 6:00pm</p>
+
+                    <!-- Contact Us Button -->
+                    <form action="mailto:office@sparkbyte.eu?subject=Contact%20Form&body=Hello," method="GET" enctype="text/plain">
+                        <button type="submit" class="submit-btn">Contact Us</button>
+                    </form>
+                </div>
+            </div>
+            <!-- Map Section -->
+            <div id="map" style="width: 100%; height: 400px;"></div>
+        </div>
+    </section>
+
+
+    <script src="js/app.js"></script>
+    <!-- <div id="particles-js"></div> -->
+</body>
+</html>
+ <div id="map" style="width: 100%; height: 400px;"></div>
