@@ -44,3 +44,9 @@
 
 ## Iteration 15
 - Enhanced section headings with text shadow, increased letter-spacing, and top padding for better visual hierarchy and prominence separating content sections
+
+## Iteration 16
+- Improved service card text readability by adding distinct semi-transparent background containers to headings and descriptions, creating clear separation from background images for better visual clarity
+
+## Iteration 17
+- Replaced hero section background with high-quality Unsplash technology image for more professional appearance and reliable CDN loading
