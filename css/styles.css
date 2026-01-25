@@ -261,12 +261,17 @@ nav {
 }
 
 .business-info p {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
 }
 
 .business-info a {
     color: var(--primary);
     text-decoration: none;
+}
+
+.business-info form {
+    margin-top: 2rem;
 }
 
 @media (max-width: 992px) {
