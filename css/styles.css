@@ -156,6 +156,7 @@ nav {
     color: var(--primary);
     margin-bottom: 1.5rem;
     font-size: 2rem;
+    line-height: 1.2;
 }
 
 .service-card p {
