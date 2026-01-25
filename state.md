@@ -35,3 +35,12 @@
 
 ## Iteration 12
 - Enhanced Contact Us button with larger font size (1.1rem), full width, increased padding, golden box shadow for visual prominence, and smooth hover animation with lift effect
+
+## Iteration 13
+- Added smooth scroll behavior to HTML element for polished navigation transitions when clicking anchor links, eliminating jarring jumps between sections
+
+## Iteration 14
+- Improved service card description text readability by increasing font-weight to 500, providing better contrast and visual clarity against background images
+
+## Iteration 15
+- Enhanced section headings with text shadow, increased letter-spacing, and top padding for better visual hierarchy and prominence separating content sections
