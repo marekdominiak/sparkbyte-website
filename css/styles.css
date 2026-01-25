@@ -155,6 +155,10 @@ nav {
     .tagline {
         font-size: 1.2rem;
     }
+
+    .hero-content {
+        padding: 2rem 1.5rem;
+    }
 }
 
 .services-section {
