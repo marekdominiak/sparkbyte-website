@@ -56,3 +56,6 @@
 
 ## Iteration 19
 - Added focus state to Contact Us button with golden outline for improved keyboard navigation accessibility and WCAG compliance
+
+## Iteration 20
+- Fixed broken map initialization by removing defunct Google Maps API code and replacing with proper Leaflet initialization on DOMContentLoaded event

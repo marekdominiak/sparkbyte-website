@@ -24,8 +24,5 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Load Google Maps API
-const script = document.createElement('script');
-script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap`;
-script.async = true;
-document.head.appendChild(script);
+// Initialize map when DOM is ready
+document.addEventListener('DOMContentLoaded', initMap);
