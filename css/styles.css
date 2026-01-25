@@ -207,6 +207,7 @@ nav {
 .service-card p {
     font-size: 1.1rem;
     line-height: 1.5;
+    font-weight: 500;
 }
 
 .contact-section {
