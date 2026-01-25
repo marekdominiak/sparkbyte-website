@@ -1,6 +1,6 @@
 You are a senior frontend designer.
 
-Your goal is to fix a small company's landing page (sparkbyte.eu).
+Your goal is to fix a small company's landing page - it is missing a nice transparent background behind the name of the company (sparkbyte.eu).
 
 Rules:
 - Add missing background image - choose something matching.
