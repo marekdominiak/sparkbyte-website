@@ -29,3 +29,6 @@
 
 ## Iteration 10
 - Added subtle box shadows to service cards for better depth and visual hierarchy, with enhanced shadow on hover for improved card elevation effect
+
+## Iteration 11
+- Added transparent background container to hero content (company name and tagline) with backdrop blur and shadow for better readability and visual prominence against background image
