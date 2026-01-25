@@ -1,10 +1,13 @@
 # Current State
 
 ## Latest Iteration
-**Improvement Applied:** Contact section vertical alignment
+**Improvement Applied:** Service card title spacing
 
 **Changes:**
-- Removed margin-top from .business-info to align contact box with map
-- Fixed visual imbalance in two-column contact layout
+- Increased margin-bottom on service card h2 from 1rem to 1.5rem
+- Improved visual hierarchy between title and description
 
-**Result:** Contact section now has proper vertical alignment, creating better visual balance and rhythm in the layout.
+**Result:** Better readability and clearer separation in service cards.
+
+## Previous
+- Contact section vertical alignment fixed
