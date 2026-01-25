@@ -26,3 +26,6 @@
 
 ## Iteration 9
 - Added animated underline hover effect to navigation links for better visual feedback and more polished, interactive user experience
+
+## Iteration 10
+- Added subtle box shadows to service cards for better depth and visual hierarchy, with enhanced shadow on hover for improved card elevation effect

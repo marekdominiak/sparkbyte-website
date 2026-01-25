@@ -14,7 +14,8 @@ Review them carefully.
 GOAL
 1. Identify the most important visual improvement
 2. Apply ONLY it (commit to local repo)
-3. Update the state.md
+3. Update the state.md for each iteration - append only (add them number if needed)
+4. then quit to terminal
 
 OUTPUT FORMAT
 - Brief explanation (max 3 sentences)
