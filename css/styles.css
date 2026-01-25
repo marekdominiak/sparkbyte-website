@@ -255,6 +255,7 @@ nav {
 .business-info h3 {
     color: var(--primary);
     margin-bottom: 1.5rem;
+    line-height: 1.2;
 }
 
 .business-info p {
