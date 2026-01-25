@@ -32,3 +32,6 @@
 
 ## Iteration 11
 - Added transparent background container to hero content (company name and tagline) with backdrop blur and shadow for better readability and visual prominence against background image
+
+## Iteration 12
+- Enhanced Contact Us button with larger font size (1.1rem), full width, increased padding, golden box shadow for visual prominence, and smooth hover animation with lift effect
