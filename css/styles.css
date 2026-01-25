@@ -294,8 +294,21 @@ nav {
     .contact-container {
         grid-template-columns: 1fr;
     }
-    
+
     .service-card {
         min-height: 300px;
     }
+}
+
+.footer {
+    background: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 2rem;
+    color: var(--text);
+    border-top: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
 }
