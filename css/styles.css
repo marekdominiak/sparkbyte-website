@@ -74,7 +74,7 @@ nav {
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.5)),
-                url('https://images.pexels.com/photos/256514/pexels-photo-256514.jpeg');
+                url('https://images.pexels.com/photos/256514/pexels-photo-256514.jpeg?auto=compress&cs=tinysrgb&w=1920');
     background-size: cover;
     background-position: center;
     display: flex;
