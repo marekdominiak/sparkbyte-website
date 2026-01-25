@@ -14,3 +14,9 @@
 
 ## Iteration 5
 - Fixed mobile navigation responsiveness by making header stack vertically on small screens, reducing font sizes, and shrinking logo to prevent overlap and awkward layout breaks
+
+## Iteration 6
+- Added footer with copyright information to provide visual closure and professional branding at page end
+
+## Iteration 7
+- Improved service cards visual appeal by reducing gradient overlay opacity from 0.9/0.7 to 0.75/0.85, allowing background images to show through better while maintaining text readability
