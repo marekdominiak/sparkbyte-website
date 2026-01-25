@@ -11,3 +11,6 @@
 
 ## Iteration 4
 - Improved contact section visual hierarchy with better spacing: increased paragraph line-height to 1.8, bottom margins to 1.5rem, and added 2rem top margin to Contact Us button for better visual balance
+
+## Iteration 5
+- Fixed mobile navigation responsiveness by making header stack vertically on small screens, reducing font sizes, and shrinking logo to prevent overlap and awkward layout breaks
