@@ -1,13 +1,38 @@
 // ===== MAP =====
-function initMap() {
-    const map = L.map('map').setView([34.7757, 32.4244], 16);
+var currentTileLayer = null;
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap contributors'
+var TILE_URLS = {
+    default: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    emerald: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    light: 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png'
+};
+
+var TILE_ATTR = {
+    default: '&copy; OpenStreetMap contributors',
+    emerald: '&copy; OpenStreetMap contributors',
+    light: '&copy; OpenStreetMap contributors &copy; CARTO'
+};
+
+function initMap() {
+    var map = L.map('map').setView([34.7757, 32.4244], 16);
+    window._sparkbyteMap = map;
+
+    var theme = document.documentElement.getAttribute('data-theme') || 'default';
+    currentTileLayer = L.tileLayer(TILE_URLS[theme] || TILE_URLS.default, {
+        attribution: TILE_ATTR[theme] || TILE_ATTR.default
     }).addTo(map);
 
-    const marker = L.marker([34.7757, 32.4244]).addTo(map);
+    var marker = L.marker([34.7757, 32.4244]).addTo(map);
     marker.bindPopup('<b>Sparkbyte Solutions</b><br>44 Georgiou Griva Digeni Ave.<br>Atlantic House, Paphos').openPopup();
+}
+
+function updateMapTiles(theme) {
+    var map = window._sparkbyteMap;
+    if (!map || !currentTileLayer) return;
+    map.removeLayer(currentTileLayer);
+    currentTileLayer = L.tileLayer(TILE_URLS[theme] || TILE_URLS.default, {
+        attribution: TILE_ATTR[theme] || TILE_ATTR.default
+    }).addTo(map);
 }
 
 // ===== MOBILE MENU =====
@@ -88,6 +113,45 @@ function initYear() {
     if (el) el.textContent = new Date().getFullYear();
 }
 
+// ===== THEME TOGGLE =====
+var THEMES = ['default', 'light', 'emerald'];
+var THEME_LABELS = { default: 'Dark', light: 'Light', emerald: 'Emerald' };
+var THEME_ICONS = { default: 'moon', light: 'sun', emerald: 'leaf' };
+
+function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+
+    var btn = document.querySelector('.theme-toggle');
+    if (btn) {
+        var iconName = THEME_ICONS[theme] || 'palette';
+        btn.innerHTML = '<i data-lucide="' + iconName + '"></i>';
+        btn.setAttribute('title', 'Theme: ' + (THEME_LABELS[theme] || theme));
+        btn.setAttribute('aria-label', 'Current theme: ' + (THEME_LABELS[theme] || theme) + '. Click to switch.');
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+    }
+
+    updateMapTiles(theme);
+}
+
+function initThemeToggle() {
+    var btn = document.querySelector('.theme-toggle');
+    if (!btn) return;
+
+    // Restore saved preference
+    var saved = localStorage.getItem('theme') || 'default';
+    applyTheme(saved);
+
+    btn.addEventListener('click', function () {
+        var current = document.documentElement.getAttribute('data-theme') || 'default';
+        var nextIndex = (THEMES.indexOf(current) + 1) % THEMES.length;
+        var next = THEMES[nextIndex];
+        applyTheme(next);
+        localStorage.setItem('theme', next);
+    });
+}
+
 // ===== INIT =====
 document.addEventListener('DOMContentLoaded', () => {
     initMap();
@@ -96,6 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollReveal();
     initActiveNav();
     initYear();
+    initThemeToggle();
 
     // Initialize Lucide icons
     if (typeof lucide !== 'undefined') {

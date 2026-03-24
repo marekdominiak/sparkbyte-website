@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="default">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,6 +24,16 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Apply saved theme before paint to prevent FOUC -->
+    <script>
+        (function() {
+            var saved = localStorage.getItem('theme');
+            if (saved && saved !== 'default') {
+                document.documentElement.setAttribute('data-theme', saved);
+            }
+        })();
+    </script>
 </head>
 <body>
 
@@ -49,6 +59,9 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
                 <a href="#contact" class="nav-cta">Get in Touch</a>
+                <button class="theme-toggle" aria-label="Current theme: Dark. Click to switch." title="Theme: Dark">
+                    <i data-lucide="moon"></i>
+                </button>
             </div>
         </nav>
     </header>
@@ -432,7 +445,7 @@
                         <p>Mon – Fri: 8:30 – 18:00 CET</p>
                     </div>
                 </div>
-                <a href="mailto:office@sparkbyte.eu?subject=Inquiry&body=Hello Sparkbyte," class="btn btn-primary btn-contact">Send Us an Email</a>
+                <a href="mailto:office@sparkbyte.eu?subject=Inquiry&body=Hello Sparkbyte," class="btn btn-primary btn-contact">Contact Us</a>
             </div>
 
             <div class="map-wrapper reveal">
