@@ -14,9 +14,9 @@ test.describe('Theme Switching', () => {
         await expect(btn).toBeVisible();
     });
 
-    test('default theme is applied on first visit', async ({ page }) => {
+    test('emerald theme is applied on first visit', async ({ page }) => {
         const html = page.locator('html');
-        await expect(html).toHaveAttribute('data-theme', 'default');
+        await expect(html).toHaveAttribute('data-theme', 'emerald');
     });
 
     test('clicking toggle cycles through themes', async ({ page }) => {
@@ -24,13 +24,13 @@ test.describe('Theme Switching', () => {
         const html = page.locator('html');
 
         await btn.click();
+        await expect(html).toHaveAttribute('data-theme', 'default');
+
+        await btn.click();
         await expect(html).toHaveAttribute('data-theme', 'light');
 
         await btn.click();
         await expect(html).toHaveAttribute('data-theme', 'emerald');
-
-        await btn.click();
-        await expect(html).toHaveAttribute('data-theme', 'default');
     });
 
     test('theme persists across page reloads', async ({ page }) => {

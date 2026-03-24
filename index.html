@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="default">
+<html lang="en" data-theme="emerald">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,7 +29,7 @@
     <script>
         (function() {
             var saved = localStorage.getItem('theme');
-            if (saved && saved !== 'default') {
+            if (saved) {
                 document.documentElement.setAttribute('data-theme', saved);
             }
         })();
@@ -59,8 +59,8 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
                 <a href="#contact" class="nav-cta">Get in Touch</a>
-                <button class="theme-toggle" aria-label="Current theme: Dark. Click to switch." title="Theme: Dark">
-                    <i data-lucide="moon"></i>
+                <button class="theme-toggle" aria-label="Current theme: Emerald. Click to switch." title="Theme: Emerald">
+                    <i data-lucide="leaf"></i>
                 </button>
             </div>
         </nav>

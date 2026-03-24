@@ -114,7 +114,7 @@ function initYear() {
 }
 
 // ===== THEME TOGGLE =====
-var THEMES = ['default', 'light', 'emerald'];
+var THEMES = ['emerald', 'default', 'light'];
 var THEME_LABELS = { default: 'Dark', light: 'Light', emerald: 'Emerald' };
 var THEME_ICONS = { default: 'moon', light: 'sun', emerald: 'leaf' };
 
@@ -140,7 +140,7 @@ function initThemeToggle() {
     if (!btn) return;
 
     // Restore saved preference
-    var saved = localStorage.getItem('theme') || 'default';
+    var saved = localStorage.getItem('theme') || 'emerald';
     applyTheme(saved);
 
     btn.addEventListener('click', function () {
