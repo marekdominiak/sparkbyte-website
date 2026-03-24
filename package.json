@@ -1,0 +1,15 @@
+{
+  "name": "sparkbyte-website",
+  "private": true,
+  "description": "Sparkbyte Solutions Ltd — company website",
+  "scripts": {
+    "serve": "npx serve . -l 3000",
+    "test": "npx playwright test",
+    "test:lighthouse": "npx lhci autorun"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "@lhci/cli": "^0.14.0",
+    "serve": "^14.2.0"
+  }
+}

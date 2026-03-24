@@ -3,97 +3,457 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sparkbyte Solutions Ltd - Transform digital challenges into innovative solutions. Web applications, cloud systems, and enterprise solutions in Nicosia, Cyprus.">
-    <meta name="keywords" content="web applications, cloud systems, enterprise solutions, software development, Cyprus, Nicosia">
-    <meta property="og:title" content="Sparkbyte Solutions Ltd">
-    <meta property="og:description" content="Transform digital challenges into innovative solutions. Web applications, cloud systems, and enterprise solutions.">
+    <meta name="description" content="Sparkbyte Solutions — A team of 10 senior engineers across Europe. Backend, DevOps, AI, mobile and frontend expertise for B2B clients across Scandinavia.">
+    <meta name="keywords" content="software consultancy, B2B, backend, DevOps, AI, mobile apps, frontend, QA, DDD, TDD, Java, AWS, React, Scandinavia, software architecture, Cyprus">
+    <meta property="og:title" content="Sparkbyte Solutions — B2B Software Consultancy">
+    <meta property="og:description" content="Senior engineering team across Europe. Frontend, backend, DevOps, QA, and AI expertise for Scandinavian clients.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sparkbyte.eu">
     <meta property="og:image" content="https://sparkbyte.eu/img/logo.png">
-    <title>Sparkbyte Solutions</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Sparkbyte Solutions — B2B Software Consultancy</title>
     <link rel="icon" type="image/png" href="img/logo.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Leaflet -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
+    <!-- ===== NAVIGATION ===== -->
     <header class="sticky-header">
         <nav>
-            <div class="nav-container">
+            <div class="nav-brand">
                 <img src="img/logo.png" alt="Sparkbyte Logo" class="logo">
-                <div class="company-name">SPARKBYTE SOLUTIONS LTD</div>
+                <span class="brand-name">SPARKBYTE</span>
             </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+
+            <button class="mobile-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#expertise">Expertise</a></li>
+                    <li><a href="#approach">Approach</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <a href="#contact" class="nav-cta">Get in Touch</a>
+            </div>
         </nav>
     </header>
 
+    <!-- ===== HERO ===== -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Sparkbyte Solutions Ltd</h1>
-            <p class="tagline">We transform digital challenges into innovative solutions</p>
-        </div>
-    </section>
+        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80" alt="" class="hero-bg-image" aria-hidden="true">
+        <div class="hero-orb hero-orb--amber" aria-hidden="true"></div>
+        <div class="hero-orb hero-orb--blue" aria-hidden="true"></div>
+        <div class="hero-orb hero-orb--purple" aria-hidden="true"></div>
+        <div class="dot-grid" aria-hidden="true"></div>
 
-    <section id="services" class="services-section">
-        <h2 class="section-heading">Our Services</h2>
-        <div class="service-cards">
-            <div class="service-card" style="background-image: linear-gradient(rgba(44, 62, 80, 0.75), rgba(44, 62, 80, 0.85)), url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&q=80')">
-                <h2>Web Applications</h2>
-                <p>Full-cycle development of scalable web applications with modern frameworks and cloud-native architectures.</p>
-            </div>
-
-            <div class="service-card" style="background-image: linear-gradient(rgba(44, 62, 80, 0.75), rgba(44, 62, 80, 0.85)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80')">
-                <h2>Cloud Systems</h2>
-                <p>Design and implementation of cloud infrastructure on AWS, Azure, and GCP with DevOps best practices.</p>
-            </div>
-
-            <div class="service-card" style="background-image: linear-gradient(rgba(44, 62, 80, 0.75), rgba(44, 62, 80, 0.85)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80')">
-                <h2>Enterprise Solutions</h2>
-                <p>Domain-driven design implementation for complex business systems with microservices architecture.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact-section">
-        <h2 class="section-heading">Get in Touch</h2>
-        <div class="contact-container">
-            
-
-            <!-- Contact Information -->
-            <div class="contact-info">
-                <div class="business-info">
-                    <h3>Contact Information</h3>
-                    <p><strong>Address:</strong><br>
-                    Piraeus 30, Floor 1, Office 1<br>
-                    Strovolos 2023, Nicosia, Cyprus</p>
-                    
-                    <p><strong>Email:</strong><br>
-                    <a href="mailto:office@sparkbyte.eu">office@sparkbyte.eu</a></p>
-                    
-                    <p><strong>Business Hours:</strong><br>
-                    Mon - Fri: 8:30am - 6:00pm</p>
-
-                    <!-- Contact Us Button -->
-                    <form action="mailto:office@sparkbyte.eu?subject=Contact%20Form&body=Hello," method="GET" enctype="text/plain">
-                        <button type="submit" class="submit-btn">Contact Us</button>
-                    </form>
+        <div class="hero-inner">
+            <div class="hero-content">
+                <span class="hero-label">B2B Software Consultancy</span>
+                <h1 class="hero-headline">We engineer software<br>that <span class="gradient-text">scales your business</span></h1>
+                <p class="hero-sub">A team of 10 senior engineers — each with 5+ years of experience — delivering backend, cloud, AI, and full-stack excellence for clients across Scandinavia.</p>
+                <div class="hero-ctas">
+                    <a href="#expertise" class="btn btn-primary">Explore Our Expertise</a>
+                    <a href="#contact" class="btn btn-ghost">Get in Touch</a>
                 </div>
             </div>
-            <!-- Map Section -->
-            <div id="map" style="width: 100%; height: 400px;"></div>
+
+            <!-- Floating code terminal visual -->
+            <div class="hero-visual" aria-hidden="true">
+                <div class="terminal">
+                    <div class="terminal-bar">
+                        <span class="terminal-dot terminal-dot--red"></span>
+                        <span class="terminal-dot terminal-dot--yellow"></span>
+                        <span class="terminal-dot terminal-dot--green"></span>
+                        <span class="terminal-title">sparkbyte — deploy</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">mvn clean package</span></div>
+                        <div class="terminal-line t-fade-1"><span class="t-success">&#10003;</span> BUILD SUCCESS <span class="t-muted">(8.4s)</span></div>
+                        <div class="terminal-line t-fade-2"><span class="t-prompt">$</span> <span class="t-cmd">aws ecr push sparkbyte/api</span></div>
+                        <div class="terminal-line t-fade-3"><span class="t-success">&#10003;</span> Image pushed <span class="t-muted">(latest)</span></div>
+                        <div class="terminal-line t-fade-4"><span class="t-prompt">$</span> <span class="t-cmd">aws ecs update-service --cluster prod</span></div>
+                        <div class="terminal-line t-fade-5"><span class="t-success">&#10003;</span> Deployed to <span class="t-link">ECS prod</span></div>
+                        <div class="terminal-line terminal-cursor"><span class="t-prompt">$</span> <span class="cursor-blink">_</span></div>
+                    </div>
+                </div>
+
+                <!-- Floating badges around terminal -->
+                <div class="floating-badge badge-java">Java</div>
+                <div class="floating-badge badge-aws">AWS</div>
+                <div class="floating-badge badge-spring">Spring Boot</div>
+            </div>
         </div>
     </section>
 
+    <!-- ===== TRUST / STATS BAR ===== -->
+    <section class="stats-bar">
+        <div class="stats-container">
+            <div class="stat">
+                <span class="stat-number">10+</span>
+                <span class="stat-label">Engineers</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">EU</span>
+                <span class="stat-label">Based Team</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">5+</span>
+                <span class="stat-label">Yrs Experience</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">6</span>
+                <span class="stat-label">Core Disciplines</span>
+            </div>
+        </div>
+    </section>
 
+    <!-- ===== EXPERTISE ===== -->
+    <section id="expertise" class="expertise-section">
+        <div class="section-glow section-glow--left" aria-hidden="true"></div>
+        <div class="section-header">
+            <span class="section-label">What We Do</span>
+            <h2 class="section-heading">Our Expertise</h2>
+            <p class="section-sub">Full-spectrum engineering — from scalable backends and cloud infrastructure to AI-powered solutions and mobile apps.</p>
+        </div>
+
+        <div class="expertise-grid reveal-stagger">
+            <div class="expertise-card reveal">
+                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80" alt="" class="card-bg" loading="lazy" aria-hidden="true">
+                <div class="card-content">
+                    <div class="card-icon">
+                        <i data-lucide="server"></i>
+                    </div>
+                    <h3>Backend Engineering</h3>
+                    <p>Scalable APIs and services designed with domain-driven principles and built for reliability at scale.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="expertise-card reveal">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80" alt="" class="card-bg" loading="lazy" aria-hidden="true">
+                <div class="card-content">
+                    <div class="card-icon">
+                        <i data-lucide="cloud"></i>
+                    </div>
+                    <h3>DevOps &amp; Cloud</h3>
+                    <p>Infrastructure as code, CI/CD pipelines, and cloud-native deployment on AWS with production-grade reliability.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">RDS</span>
+                        <span class="tech-tag">S3</span>
+                        <span class="tech-tag">CI/CD</span>
+                        <span class="tech-tag">IaC</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="expertise-card reveal">
+                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=600&q=80" alt="" class="card-bg" loading="lazy" aria-hidden="true">
+                <div class="card-content">
+                    <div class="card-icon">
+                        <i data-lucide="brain"></i>
+                    </div>
+                    <h3>AI &amp; R&amp;D</h3>
+                    <p>Applied AI integration and research into emerging technologies. We build AI-powered features and leverage LLMs to accelerate delivery.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">LLM Integration</span>
+                        <span class="tech-tag">AI-Assisted Dev</span>
+                        <span class="tech-tag">Prototyping</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="expertise-card reveal">
+                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80" alt="" class="card-bg" loading="lazy" aria-hidden="true">
+                <div class="card-content">
+                    <div class="card-icon">
+                        <i data-lucide="smartphone"></i>
+                    </div>
+                    <h3>Mobile Applications</h3>
+                    <p>Native and cross-platform apps for Android and iOS — from concept through app store deployment.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Android</span>
+                        <span class="tech-tag">iOS</span>
+                        <span class="tech-tag">React Native</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="expertise-card reveal">
+                <img src="https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?auto=format&fit=crop&w=600&q=80" alt="" class="card-bg" loading="lazy" aria-hidden="true">
+                <div class="card-content">
+                    <div class="card-icon">
+                        <i data-lucide="shield-check"></i>
+                    </div>
+                    <h3>Quality Assurance</h3>
+                    <p>Comprehensive testing strategies from unit to end-to-end, ensuring every release meets production standards.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Playwright</span>
+                        <span class="tech-tag">Jest</span>
+                        <span class="tech-tag">TDD</span>
+                        <span class="tech-tag">E2E</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="expertise-card reveal">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80" alt="" class="card-bg" loading="lazy" aria-hidden="true">
+                <div class="card-content">
+                    <div class="card-icon">
+                        <i data-lucide="monitor"></i>
+                    </div>
+                    <h3>Frontend Engineering</h3>
+                    <p>Responsive, performant user interfaces built with modern frameworks and a focus on accessibility and user experience.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Next.js</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section divider -->
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- ===== TECH SHOWCASE ===== -->
+    <section class="showcase-section">
+        <div class="section-header">
+            <span class="section-label">Tech in Action</span>
+            <h2 class="section-heading">Built with modern stacks</h2>
+            <p class="section-sub">From cloud-native Java services to cross-platform mobile apps — our engineers deliver across the full technology spectrum.</p>
+        </div>
+
+        <div class="showcase-grid" aria-hidden="true">
+            <div class="showcase-terminal">
+                <div class="terminal-bar">
+                    <span class="terminal-dot terminal-dot--red"></span>
+                    <span class="terminal-dot terminal-dot--yellow"></span>
+                    <span class="terminal-dot terminal-dot--green"></span>
+                    <span class="terminal-title">backend — deploy</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">mvn clean package</span></div>
+                    <div class="terminal-line"><span class="t-success">&#10003;</span> BUILD SUCCESS <span class="t-muted">(4.2s)</span></div>
+                    <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">aws ecs update-service</span></div>
+                    <div class="terminal-line"><span class="t-success">&#10003;</span> Deployed to <span class="t-link">ECS prod</span></div>
+                </div>
+                <div class="showcase-badges">
+                    <span class="showcase-badge badge-color-orange">Java</span>
+                    <span class="showcase-badge badge-color-orange">AWS</span>
+                    <span class="showcase-badge badge-color-blue">Spring Boot</span>
+                </div>
+            </div>
+
+            <div class="showcase-terminal">
+                <div class="terminal-bar">
+                    <span class="terminal-dot terminal-dot--red"></span>
+                    <span class="terminal-dot terminal-dot--yellow"></span>
+                    <span class="terminal-dot terminal-dot--green"></span>
+                    <span class="terminal-title">mobile — release</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">./gradlew assembleRelease</span></div>
+                    <div class="terminal-line"><span class="t-success">&#10003;</span> APK built <span class="t-muted">(38.5s)</span></div>
+                    <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">fastlane ios release</span></div>
+                    <div class="terminal-line"><span class="t-success">&#10003;</span> Uploaded to <span class="t-link">App Store</span></div>
+                </div>
+                <div class="showcase-badges">
+                    <span class="showcase-badge badge-color-green">Android</span>
+                    <span class="showcase-badge badge-color-blue">iOS</span>
+                    <span class="showcase-badge badge-color-cyan">React Native</span>
+                </div>
+            </div>
+
+            <div class="showcase-terminal">
+                <div class="terminal-bar">
+                    <span class="terminal-dot terminal-dot--red"></span>
+                    <span class="terminal-dot terminal-dot--yellow"></span>
+                    <span class="terminal-dot terminal-dot--green"></span>
+                    <span class="terminal-title">ai — inference</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">python deploy_model.py</span></div>
+                    <div class="terminal-line"><span class="t-success">&#10003;</span> Model deployed <span class="t-muted">(staging)</span></div>
+                    <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">curl api/v1/predict</span></div>
+                    <div class="terminal-line"><span class="t-success">&#8594;</span> <span class="t-link">{"confidence": 0.97}</span></div>
+                </div>
+                <div class="showcase-badges">
+                    <span class="showcase-badge badge-color-purple">LLM</span>
+                    <span class="showcase-badge badge-color-cyan">Python</span>
+                    <span class="showcase-badge badge-color-orange">Claude API</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section divider -->
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- ===== APPROACH ===== -->
+    <section id="approach" class="approach-section">
+        <div class="section-glow section-glow--right" aria-hidden="true"></div>
+        <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=1200&q=80" alt="" class="section-bg-image" loading="lazy" aria-hidden="true">
+        <div class="section-header">
+            <span class="section-label">How We Work</span>
+            <h2 class="section-heading">Our Approach</h2>
+            <p class="section-sub">Engineering practices that ensure quality, maintainability, and speed — from day one.</p>
+        </div>
+
+        <div class="approach-grid reveal-stagger">
+            <div class="approach-card reveal">
+                <div class="approach-number">01</div>
+                <h3>Domain-Driven Design</h3>
+                <p>We start by deeply understanding your business domain. Our code models reflect your real-world processes, not the other way around.</p>
+            </div>
+
+            <div class="approach-card reveal">
+                <div class="approach-number">02</div>
+                <h3>Test-Driven Development</h3>
+                <p>Quality is built in from the first line. TDD ensures every component works as specified before it ships.</p>
+            </div>
+
+            <div class="approach-card reveal">
+                <div class="approach-number">03</div>
+                <h3>End-to-End Testing</h3>
+                <p>Full coverage from unit tests to production-like E2E scenarios. We catch issues before your users do.</p>
+            </div>
+
+            <div class="approach-card reveal">
+                <div class="approach-number">04</div>
+                <h3>AI-Augmented Engineering</h3>
+                <p>We use AI tools strategically to accelerate development without compromising code quality or architecture.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section divider -->
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-content reveal">
+                <span class="section-label">Who We Are</span>
+                <h2 class="section-heading section-heading--left">A senior engineering team,<br>distributed across the EU</h2>
+                <p>Sparkbyte Solutions is a team of 10 senior software engineers distributed across the EU, each with 5+ years of experience. Serving clients across Scandinavia and led by CTO Marek Dominiak, we combine strong architectural thinking with modern practices like DDD, TDD, and AI-assisted development to build systems that scale.</p>
+                <p>We work as embedded teams — integrating with your existing processes while bringing architectural depth and engineering discipline that accelerates delivery.</p>
+            </div>
+            <div class="about-visual-col reveal">
+                <div class="about-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Team collaboration" class="about-image" loading="lazy">
+                    <div class="about-image-overlay" aria-hidden="true"></div>
+                </div>
+                <div class="about-stats">
+                <div class="about-stat">
+                    <span class="about-stat-icon"><i data-lucide="users"></i></span>
+                    <div>
+                        <strong>10+ Engineers</strong>
+                        <span>5+ years experience each</span>
+                    </div>
+                </div>
+                <div class="about-stat">
+                    <span class="about-stat-icon"><i data-lucide="map-pin"></i></span>
+                    <div>
+                        <strong>EU-Based</strong>
+                        <span>Distributed across Europe</span>
+                    </div>
+                </div>
+                <div class="about-stat">
+                    <span class="about-stat-icon"><i data-lucide="globe"></i></span>
+                    <div>
+                        <strong>Scandinavia</strong>
+                        <span>Primary client market</span>
+                    </div>
+                </div>
+                <div class="about-stat">
+                    <span class="about-stat-icon"><i data-lucide="code"></i></span>
+                    <div>
+                        <strong>End-to-End Delivery</strong>
+                        <span>Backend, cloud, AI, mobile &amp; frontend</span>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section divider -->
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="contact-section">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80" alt="" class="section-bg-image" loading="lazy" aria-hidden="true">
+        <div class="section-header">
+            <span class="section-label">Get Started</span>
+            <h2 class="section-heading">Let's build something together</h2>
+        </div>
+
+        <div class="contact-container">
+            <div class="contact-info reveal">
+                <div class="contact-detail">
+                    <span class="contact-icon"><i data-lucide="map-pin"></i></span>
+                    <div>
+                        <strong>Office</strong>
+                        <p>44 Georgiou Griva Digeni Ave.<br>Atlantic House, 8047 Paphos, Cyprus</p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <span class="contact-icon"><i data-lucide="mail"></i></span>
+                    <div>
+                        <strong>Email</strong>
+                        <p><a href="mailto:office@sparkbyte.eu">office@sparkbyte.eu</a></p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <span class="contact-icon"><i data-lucide="clock"></i></span>
+                    <div>
+                        <strong>Business Hours</strong>
+                        <p>Mon – Fri: 8:30 – 18:00 CET</p>
+                    </div>
+                </div>
+                <a href="mailto:office@sparkbyte.eu?subject=Inquiry&body=Hello Sparkbyte," class="btn btn-primary btn-contact">Send Us an Email</a>
+            </div>
+
+            <div class="map-wrapper reveal">
+                <div id="map"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
-        <p>&copy; 2025 Sparkbyte Solutions Ltd. All rights reserved.</p>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <img src="img/logo.png" alt="Sparkbyte" class="footer-logo">
+                <span>Sparkbyte Solutions Ltd</span>
+            </div>
+            <p>&copy; <span id="year"></span> Sparkbyte Solutions Ltd &middot; Registered in Cyprus. All rights reserved.</p>
+        </div>
     </footer>
 
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <script src="js/app.js"></script>
-    <!-- <div id="particles-js"></div> -->
 </body>
 </html>

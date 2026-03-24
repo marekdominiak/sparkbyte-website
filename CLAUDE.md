@@ -4,47 +4,55 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a static company website for Sparkbyte Solutions Ltd, hosted on GitHub Pages with a custom domain (sparkbyte.eu). The site is a single-page application with three main sections: Home (hero), Services, and Contact.
+Static company website for Sparkbyte Solutions Ltd — a B2B software consultancy with 10 engineers across the EU (mainly Poland), serving clients in Norway and Scotland. Hosted on GitHub Pages at sparkbyte.eu.
+
+## Tech Stack
+
+- Pure HTML/CSS/JavaScript — no build process, no frontend frameworks
+- Leaflet.js + OpenStreetMap tiles for interactive map (CDN via unpkg)
+- Inter + JetBrains Mono fonts via Google Fonts CDN
+- Lucide Icons via CDN
+- Deployed automatically by pushing to `main` branch (GitHub Pages)
+
+## Development
+
+```bash
+# Local dev — open index.html directly or:
+python3 -m http.server 8000
+# or
+npx serve . -l 3000
+```
+
+## Testing
+
+```bash
+npm install                    # first time only
+npx playwright install         # install browsers (first time only)
+npm test                       # run Playwright E2E tests
+npm run test:lighthouse        # run Lighthouse CI audits
+```
+
+Tests run against a local static server (auto-started by Playwright config). CI runs both Playwright and Lighthouse on every push/PR via GitHub Actions.
 
 ## Architecture
 
-**Technology Stack:**
-- Pure HTML/CSS/JavaScript (no build process or frameworks)
-- Leaflet.js for interactive maps (OpenStreetMap tiles)
-- GitHub Pages for hosting
+**Single-page layout** with 8 sections: Hero, Stats Bar, Expertise (5 cards), Approach (4 methodology cards), About/Team, Contact (info + Leaflet map), Footer. All in `index.html`, styled by `css/styles.css`, with behavior in `js/app.js`.
 
-**Structure:**
-- `index.html` - Single page containing all sections (home, services, contact)
-- `css/styles.css` - All styling with CSS custom properties for theming
-- `js/app.js` - Client-side JavaScript for map initialization and smooth scrolling
-- `img/logo.png` - Company logo
-- `CNAME` - Custom domain configuration for GitHub Pages
+**Design system** uses CSS custom properties in `:root`:
+- Backgrounds: `--bg-primary` (#09090B), `--bg-secondary` (#18181B), `--bg-tertiary` (#27272A)
+- Text: `--text-primary` (#FAFAFA), `--text-secondary` (#A1A1AA), `--text-muted` (#71717A)
+- Accent: `--accent` (#F59E0B amber), `--accent-light` (#FCD34D)
+- Secondary: `--accent-blue` (#3B82F6)
 
-**Key Design Patterns:**
-- Sticky header navigation with smooth scroll anchors
-- CSS Grid for responsive service cards and contact layout
-- CSS custom properties (variables) for theming: `--primary` (gold #FFD700), `--secondary` (dark blue #2C3E50), `--accent`, `--text`
-- Mobile-first responsive design with media queries at 768px and 992px breakpoints
+**Responsive breakpoints**: 768px (mobile — hamburger nav, stacked grids), 992px (tablet — single-column contact/about)
 
-**Map Implementation:**
-The site uses Leaflet.js (not Google Maps despite commented code in app.js:29-31) for the interactive map showing the business location in Nicosia, Cyprus (coordinates: 35.1739, 33.3647). The map is initialized on page load with OpenStreetMap tiles.
+**JS modules** in `app.js`:
+- `initMap()` — Leaflet map centered on Paphos, Cyprus (34.7757, 32.4244)
+- `initMobileMenu()` — hamburger toggle with aria-expanded
+- `initScrollReveal()` — Intersection Observer for `.reveal` elements
+- `initActiveNav()` — highlights current section in nav
+- Lucide icon initialization via `lucide.createIcons()`
 
-## Development Commands
+**Contact**: `mailto:` link to office@sparkbyte.eu — no server-side processing.
 
-Since this is a static site with no build process, there are no build or test commands. To develop:
-
-1. **Local Development**: Open `index.html` directly in a browser, or use any static file server:
-   ```bash
-   python3 -m http.server 8000
-   # or
-   npx serve .
-   ```
-
-2. **Deploy**: Push to the `main` branch. GitHub Pages automatically serves the site.
-
-## Important Notes
-
-- The contact form uses a `mailto:` link (office@sparkbyte.eu) instead of server-side processing
-- Service card backgrounds use inline styles with Unsplash/Pexels image URLs
-- No package.json or dependencies to manage (external libraries loaded via CDN)
-- The site has no client-side routing - all sections are on a single page with anchor navigation
+**Expertise cards**: Bento grid layout (3 top + 2 centered bottom on desktop). Tech tags styled as pills in JetBrains Mono.
