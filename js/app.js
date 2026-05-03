@@ -14,6 +14,9 @@ var TILE_ATTR = {
 };
 
 function initMap() {
+    var mapEl = document.getElementById('map');
+    if (!mapEl || typeof L === 'undefined') return;
+
     var map = L.map('map').setView([34.7757, 32.4244], 16);
     window._sparkbyteMap = map;
 

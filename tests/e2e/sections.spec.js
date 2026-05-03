@@ -49,7 +49,7 @@ test.describe('Page Sections', () => {
         await expect(about).toContainText('Marek Dominiak');
         await expect(about).toContainText('EU');
         await expect(about).toContainText('Scandinavia');
-        await expect(about).toContainText('5+');
+        await expect(about).toContainText('10+');
     });
 
     test('contact section has Paphos address', async ({ page }) => {
